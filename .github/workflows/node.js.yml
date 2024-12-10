@@ -5,7 +5,7 @@ name: Automation Test Execution
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   tests:
@@ -36,7 +36,7 @@ jobs:
         path: test-results
     - name: Upload allure-results artifact
       if: always()
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@main
       with:
         name: allure-results
         path: allure-results
@@ -64,7 +64,7 @@ jobs:
         path: gh-pages
 
     - name: Allure Report action
-      uses: simple-elf/allure-report-action@master
+      uses: simple-elf/allure-report-action@main
       if: always()
       id: allure-report
       with:
