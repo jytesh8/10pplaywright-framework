@@ -36,7 +36,7 @@ jobs:
         path: test-results
     - name: Upload allure-results artifact
       if: always()
-      uses: actions/upload-artifact@main
+      uses: actions/upload-artifact@master
       with:
         name: allure-results
         path: allure-results
@@ -64,7 +64,7 @@ jobs:
         path: gh-pages
 
     - name: Allure Report action
-      uses: simple-elf/allure-report-action@main
+      uses: simple-elf/allure-report-action@master
       if: always()
       id: allure-report
       with:
