@@ -16,4 +16,7 @@ export default class CommonConstants {
     static readonly REPORT_TITLE = "Test Execution Report";
     static readonly RESULTS_PATH = "./test-results/results";
     static readonly JUNIT_RESULTS_PATH = `${CommonConstants.RESULTS_PATH}/results.xml`;
+    static readonly FALSE = 'false';
+    static readonly TRUE = 'true';
+    static readonly TEN = 10;
 }

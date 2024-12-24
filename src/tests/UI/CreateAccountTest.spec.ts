@@ -1,5 +1,5 @@
-import HomeSteps from "application-context/steps/HomeSteps";
-import RegistrationSteps from "application-context/steps/RegistrationSteps";
+import Home from "application-context/helper-methods/Home";
+import Registration from "application-context/helper-methods/Registration";
 import { test } from "@base-test";
 import Allure from "@allure";
 import ExcelUtil from "@utils/ExcelUtil";
@@ -10,10 +10,10 @@ const testData = ExcelUtil.getTestDataArray(sheet);
 for (const data of testData) {
     test(`${data.TestID} - ${data.Description}`, async ({ page }) => {
         Allure.attachDetails(data.Description, data.Issue);
-        const home = new HomeSteps(page);
+        const home = new Home(page);
         await home.launchApplication();
         await home.navigateToCreateAccount();
-        const register = new RegistrationSteps(page);
+        const register = new Registration(page);
         const userName = await register.createAccount(data.Email, data.Password,
             data.ConfirmPassword, data.FirstName, data.LastName, data.PhoneNumber, data.Country,
             data.City, data.Address, data.State, data.PostalCode, data.AllowOffersPromotion);

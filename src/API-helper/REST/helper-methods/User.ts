@@ -4,7 +4,7 @@ import RESTResponse from "@apiActions/RESTResponse";
 import Assert from "@asserts/Assert";
 import RESTConstants from "API-helper/REST/constants/RESTConstants";
 
-export default class UserSteps {
+export default class User {
     private api: APIActions;
     private BASE_URL = process.env.REST_API_BASE_URL;
     constructor(private page: Page) {

@@ -1,11 +1,11 @@
 import test, { Page } from "@playwright/test";
 import UIActions from "@uiActions/UIActions";
 import Assert from "@asserts/Assert";
-import CommonConstants from "application-context/constants/CommonConstants";
+import CommonConstants from "framework/constants/CommonConstants";
 import HomePageConstants from "application-context/constants/HomePageConstants";
 import HomePage from "application-context/pages/HomePage";
 
-export default class HomeSteps {
+export default class Home {
     private ui: UIActions;
 
     constructor(private page: Page) {

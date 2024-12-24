@@ -1,5 +1,5 @@
 import { test, Locator } from "@playwright/test";
-import HTMLConstants from "../../constants/HTMLConstants";
+import HTMLConstants from "../../../application-context/constants/HTMLConstants";
 
 export default class DropDownActions {
   private locator: Locator;

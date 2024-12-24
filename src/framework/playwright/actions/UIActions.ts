@@ -1,6 +1,6 @@
 import { test, Page } from "@playwright/test";
 import CommonConstants from "../../constants/CommonConstants";
-import HTMLConstants from "../../constants/HTMLConstants";
+import HTMLConstants from "../../../application-context/constants/HTMLConstants";
 import AlertActions from "./AlertActions";
 import CheckBoxActions from "./CheckBoxActions";
 import DropDownActions from "./DropDownActions";

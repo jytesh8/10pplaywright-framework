@@ -1,13 +1,14 @@
-import UserSteps from "API-helper/REST/steps/UserSteps";
+import UserSteps from "API-helper/REST/helper-methods/User";
 import { test } from "@base-test";
 import Allure from "@allure";
 import ExcelUtil from "@utils/ExcelUtil";
 import StringUtil from "@utils/StringUtil";
+import User from "API-helper/REST/helper-methods/User";
 
 const SHEET = "RESTUserTest";
-let user: UserSteps;
+let user: User;
 test.beforeEach(async ({ page }) => {
-    user = new UserSteps(page);
+    user = new User(page);
 });
 
 const allUserData = ExcelUtil.getTestData(SHEET, "TC01_GetAllUserTest");

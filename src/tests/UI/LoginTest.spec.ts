@@ -1,13 +1,13 @@
-import HomeSteps from "application-context/steps/HomeSteps";
-import RegistrationSteps from "application-context/steps/RegistrationSteps";
+import Home from "application-context/helper-methods/Home";
+import Registration from "application-context/helper-methods/Registration";
 import { test } from "@base-test";
 import Allure from "@allure";
 import ExcelUtil from "@utils/ExcelUtil";
 
 const SHEET = "LoginTest";
-let home: HomeSteps;
+let home: Home;
 test.beforeEach(async ({ page }) => {
-    home = new HomeSteps(page);
+    home = new Home(page);
 });
 
 const data1 = ExcelUtil.getTestData(SHEET, "TC01_ValidLogin");
@@ -32,7 +32,7 @@ test(`${data3.TestID} - ${data3.Description}`, async ({ page }) => {
     Allure.attachDetails(data3.Description, data3.Issue);
     await home.launchApplication();
     await home.navigateToCreateAccount();
-    const register = new RegistrationSteps(page);
+    const register = new Registration(page);
     await register.alreadyHaveAccount();
     await home.enterLoginDetails(data3.UserName, data3.Password);
     await home.validateLogin(data3.UserName);

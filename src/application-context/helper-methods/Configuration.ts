@@ -3,10 +3,10 @@ import ConfigurationPage from "application-context/pages/ConfigurationPage";
 import Assert from "@asserts/Assert";
 import UIActions from "@uiActions/UIActions";
 import PDFUtil from "@utils/PDFUtil";
-import CommonConstants from "application-context/constants/CommonConstants";
+import CommonConstants from "framework/constants/CommonConstants";
 import ConfigurationConstants from "application-context/constants/ConfigurationConstants";
 
-export default class ConfigurationSteps {
+export default class Configuration {
     private ui: UIActions;
 
     constructor(private page: Page) {
@@ -24,14 +24,14 @@ export default class ConfigurationSteps {
 
     public async verifyPDFFilePageCount(fileName: string, pages: number) {
         await test.step(`Verify that ${fileName} file has ${pages} pages`, async () => {
-            await Assert.assertEquals(await PDFUtil.getNumberOfPages(CommonConstants.DOWNLOADS_PATH + fileName),
+            await Assert.assertEquals(await PDFUtil.getNumberOfPages(CommonConstants.DOWNLOAD_PATH + fileName),
                 pages, fileName);
         });
     }
 
     public async verifyPDFFileText(fileName: string, content: string) {
         await test.step(`Verify that ${fileName} has content ${content}`, async () => {
-            await Assert.assertContains(await PDFUtil.getText(CommonConstants.DOWNLOADS_PATH + fileName),
+            await Assert.assertContains(await PDFUtil.getText(CommonConstants.DOWNLOAD_PATH + fileName),
                 content, fileName);
         });
     }

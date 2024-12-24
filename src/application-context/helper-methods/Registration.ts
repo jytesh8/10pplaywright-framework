@@ -2,11 +2,11 @@ import test, { Page } from "@playwright/test";
 import UIActions from "@uiActions/UIActions";
 import Assert from "@asserts/Assert";
 import StringUtil from "@utils/StringUtil";
-import CommonConstants from "application-context/constants/CommonConstants";
+import CommonConstants from "framework/constants/CommonConstants";
 import RegistrationPageConstants from "application-context/constants/RegistrationPageConstants";
 import RegistrationPage from "application-context/pages/RegistrationPage";
 
-export default class RegistrationSteps {
+export default class Registration {
     private ui: UIActions;
 
     constructor(private page: Page) {
