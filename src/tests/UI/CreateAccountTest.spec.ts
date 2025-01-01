@@ -6,7 +6,6 @@ import ExcelUtil from "@utils/ExcelUtil";
 
 const sheet = "CreateAccountTest";
 const testData = ExcelUtil.getTestDataArray(sheet);
-// eslint-disable-next-line no-restricted-syntax
 for (const data of testData) {
     test(`${data.TestID} - ${data.Description}`, async ({ page }) => {
         Allure.attachDetails(data.Description, data.Issue);

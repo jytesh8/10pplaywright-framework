@@ -4,7 +4,6 @@ import { test } from "@base-test";
 import Database from "database-helper/helper-methods/Database";
 
 const testData = ExcelUtil.getTestDataArray("DatabaseTest");
-// eslint-disable-next-line no-restricted-syntax
 for (const data of testData) {
     test(`${data.TestID} - ${data.Description}`, async ({ }) => {
         Allure.attachDetails(data.Description, data.Issue);

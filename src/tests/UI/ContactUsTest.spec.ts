@@ -4,7 +4,6 @@ import Allure from "@allure";
 import Home from "application-context/helper-methods/Home";
 
 const testData = ExcelUtil.getTestDataArray("ContactUsTest");
-// eslint-disable-next-line no-restricted-syntax
 for (const data of testData) {
     test(`${data.TestID} : ${data.Description}`, async ({ page }) => {
         Allure.attachDetails(data.Description, data.Issue);
