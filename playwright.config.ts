@@ -58,7 +58,7 @@ const config: PlaywrightTestConfig = {
   projects: [
     {
       name: "local",
-      testMatch: ["**/*.ts"],
+      testMatch: ["**/*/*.ts"],
     },
     {
       name: "suite",
