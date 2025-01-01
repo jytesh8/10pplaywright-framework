@@ -18,7 +18,7 @@ export default class SuiteManager {
                 modeOfRun = `\n\ttest.describe.configure({ mode: '${Mode.toLowerCase()}' });`;
             }
             testList += `\ntest.describe("${TestName}", () => {${modeOfRun}
-	require("./*/${TestName}.spec.ts");
+	require("./${TestName}.spec.ts");
 });`;
         }
         fs.writeFileSync(`${CommonConstants.TEST_FOLDER_PATH}${sheet}${CommonConstants.TEST_SUITE_FILE_FORMAT}`,
