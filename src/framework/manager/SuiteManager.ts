@@ -12,15 +12,15 @@ export default class SuiteManager {
         const sheet = CLIUtil.getValueOf("SHEET");
         this.deleteFiles(CommonConstants.TEST_FOLDER_PATH);
         let testList = CommonConstants.BLANK;
-        for (const { TestName, Mode } of ExcelUtil.getSuiteTests(sheet)) {            
+        for (const { TestName, Mode } of ExcelUtil.getSuiteTests(sheet)) {
             let modeOfRun = CommonConstants.BLANK;
             if (Mode !== undefined && Mode !== null && Mode !== CommonConstants.BLANK) {
                 modeOfRun = `\n\ttest.describe.configure({ mode: '${Mode.toLowerCase()}' });`;
             }
             testList += `\ntest.describe("${TestName}", () => {${modeOfRun}
-	require("./${TestName}.spec.ts");
+	require("./*/${TestName}.spec.ts");
 });`;
-        }        
+        }
         fs.writeFileSync(`${CommonConstants.TEST_FOLDER_PATH}${sheet}${CommonConstants.TEST_SUITE_FILE_FORMAT}`,
             SuiteTemplate.getTemplate(sheet, testList));
         console.log(" Completed!! ");

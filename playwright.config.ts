@@ -62,7 +62,7 @@ const config: PlaywrightTestConfig = {
     },
     {
       name: "suite",
-      testMatch: "**/*.test.ts",
+      testMatch: "*.test.ts",
     },
   ],
 };
