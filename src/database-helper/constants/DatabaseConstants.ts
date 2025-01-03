@@ -6,7 +6,7 @@ export default class DatabaseConstants {
     static readonly CONNECTION_STRING = "";
     static readonly dbConfig = {
         user: 'sa',        // Replace with your SQL Server username
-        password: 'Romania()1995',    // Replace with your SQL Server password
+        password: '',    // Replace with your SQL Server password
         server: 'LQA-JYTESHPUNJW', // Server and instance name (escaped backslash)
         database: 'shadanienterprises',    // Replace with your database name
         options: {
