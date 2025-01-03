@@ -8,19 +8,19 @@ This is a test framework designed using Playwright and Typescript and uses playw
 For Demo purpose UI test cases are created on [advantageonlineshopping.com](http://advantageonlineshopping.com/) site and API test cases are created on [REST API] (https://fakestoreapi.com).
 
 ## Features
-- This framework has built in library to operate on UI, API (both SOAP & REST API) and DB (MSSQL, DB2 & Oracle).
-- Supports execution of tests in different browsers.
-- Test data is stored in an Excel sheet and from this Excel sheet user can control the test cases that needs to be run.
-- User also has full control to run test in different modes from the Excel sheet.
+- This framework has built-in library to operate on UI, API and DB.
+- Supports execution of tests in multiple browsers.
+- Test data is stored in Excel sheet and user can control test cases that needs to be run.
+- User also has full control to run test in different modes from the excel sheet.
 - Allows transfer of data between test cases.
 - Has utility built in for file download, Read PDF files etc.
-- Generates Playwright's HTML Report, Allure Report & JUnit Report in HTML format for each exaction. 
-- Allure & Playwright report including snapshots and video in case of test failure.
+- Generates Playwright HTML report and Allure Report​. 
+- Allure and Playwright reports includes Snapshots and video in case of test failure.
 - Test execution logs are captured in the log file.
-- You Can execute local tests in Playwright's UI Mode, that comes with a built-in watch mode. Which helps in running and debuging of tests.
+- User can execute local tests in Playwright's UI mode which helps in running and debugging tests​.
 - All the playwright related config is controlled by playwright config file.
 - Environment variables can be modified at runtime and its controlled by .env file.
-- Easy and simple integration to CI/CD tools like Jenkins.
+- Easy and simple integration to CI/CD with Github Actions.
 
 #### Supported Browsers
 1. Chrome - default browser
