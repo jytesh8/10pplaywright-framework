@@ -1,0 +1,40 @@
+Request:  curl 'https://fakestoreapi.com/users/11' -X PUT -H "Content-Type: application/json" -H "Accept: application/json" --data-binary '{
+  "address": {
+    "geolocation": {
+      "lat": "-37.3159",
+      "long": "81.1496"
+    },
+    "city": "Islamabad",
+    "street": "new road",
+    "number": 56431,
+    "zipcode": "3874-34562"
+  },
+  "email": "orwEt@gmail.com",
+  "username": "orwEt",
+  "password": "9svsx",
+  "name": {
+    "firstname": "john",
+    "lastname": "doe"
+  },
+  "phone": "9463417283"
+}'
+Response body: {
+  "address": {
+    "geolocation": {
+      "lat": "-37.3159",
+      "long": "81.1496"
+    },
+    "city": "Islamabad",
+    "street": "new road",
+    "number": 56431,
+    "zipcode": "3874-34562"
+  },
+  "email": "orwEt@gmail.com",
+  "username": "orwEt",
+  "password": "9svsx",
+  "name": {
+    "firstname": "john",
+    "lastname": "doe"
+  },
+  "phone": "9463417283"
+}
